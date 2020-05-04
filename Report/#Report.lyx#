@@ -579,11 +579,15 @@ The question here arsises about what actually energy is.
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-E(C)=E_{internal}(C)+E_{external}(C)
+E(C)=E_{internal}+E_{external}
 \end{equation}
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
 
 \end_layout
 
