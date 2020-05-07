@@ -4,7 +4,7 @@
 \begin_header
 \save_transient_properties true
 \origin unavailable
-\textclass book
+\textclass report
 \use_default_options true
 \maintain_unincluded_children false
 \language english
@@ -79,11 +79,17 @@
 \begin_body
 
 \begin_layout Title
+
+\series bold
 Segmentation of Prostate by Active Contour Model
 \end_layout
 
 \begin_layout Author
 Muhammad Arsalan Khawaja
+\begin_inset Newline linebreak
+\end_inset
+
+Bui Thien Bao
 \end_layout
 
 \begin_layout Date
@@ -126,7 +132,17 @@ begin{dedication}
 
 \begin_layout Plain Layout
 
+\end_layout
+
+\begin_layout Plain Layout
+
 To Neha, the love of my life...!
+\backslash
+newline Arsalan
+\end_layout
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -135,6 +151,37 @@ To Neha, the love of my life...!
 \backslash
 end{dedication}
 \end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Abstract
+Prostate cancer is most common cancer among men.
+ There has been a lot of research to detect the cancer at the earliest possible
+ stage.
+ A number of methods are available and used to detect tumor, but scientific
+ community is always curious to find a compuationally cheap, reliable, robust
+ and more accurate segmentation of prostate.
+ This report proposes semi automatic segmentation of different zones of
+ prostate as well as tumor using Active Contour Model.
+ The report starts with brief introduction of Prostate and discusses related
+ biological pre-requisites to understand the aim of the project.
+ The report then describes active contour model and theory behind to let
+ reader's know how it works.
+ The algorithm is implemented on MATLAB and an application is created.
+ The report finally ends with guiding the user with application.
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FloatList figure
 
 \end_inset
 
@@ -161,7 +208,164 @@ The prostate is one of the important body part , its a walnut-sized gland
  the penis, letting urine flow out of the body.
  The prostate secretes fluid that nourishes and protects sperm.
  During ejaculation, the prostate squeezes this fluid into the urethra,
- and it’s expelled with sperm as semen.
+ and it’s expelled with sperm as semen 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "epstein2008biopsy"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename prostate.PNG
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Prostate location 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "epstein2008biopsy"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Prostate cancer is one of the most common types of cancer in men.
+ Usually prostate cancer grows slowly and is initially confined to the prostate
+ gland, where it may not cause serious harm.
+ However, while some types of prostate cancer grow slowly and may need minimal
+ or even no treatment, other types are aggressive and can spread quickly.
+\end_layout
+
+\begin_layout Standard
+It's not clear what causes prostate cancer.
+ Doctors know that prostate cancer begins when some cells in your prostate
+ become abnormal.
+ Mutations in the abnormal cells' DNA cause the cells to grow and divide
+ more rapidly than normal cells do.
+ The abnormal cells continue living, when other cells would die.
+ The accumulating abnormal cells form a tumor that can grow to invade nearby
+ tissue.
+ Some abnormal cells can also break off and spread (metastasize) to other
+ parts of the body 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "prostate_Verma"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In order to understand the project, we need to understand the anatomy of
+ prostate.
+ The next section describes briefly the anatomy of Prostate.
+\end_layout
+
+\begin_layout Section
+Anatomy of Prostate
+\end_layout
+
+\begin_layout Standard
+The prostate is the largest accessory gland in the male reproductive system.
+ The prostate is positioned inferiorly to the neck of the bladder and superiorly
+ to the external urethral sphincter, with the levator ani muscle lying inferolat
+erally to the gland
+\begin_inset CommandInset citation
+LatexCommand cite
+key "epstein2008biopsy"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The prostate is commonly described as being the size of a walnut.
+ Roughly two-thirds of the prostate is glandular in structure and the remaining
+ third is fibromuscular.
+ The gland itself is surrounded by a thin fibrous capsule of the prostate.
+ This is not a real capsule; it rather resembles the thin connective tissue
+ known as adventitia in the large blood vessels.
+ The prostate is divided into three zones 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "teachmeanatomy"
+literal "false"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Central zone
+\series default
+ – surrounds the ejaculatory ducts, comprising approximately 25% of normal
+ prostate volume.
+ The ducts of the glands from the central zone are obliquely emptying in
+ the prostatic urethra, thus being rather immune to urine reflux.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Transitional zone
+\series default
+ – located centrally and surrounds the urethra, comprising approximately
+ 5-10% of normal prostate volume.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Peripheral zone
+\series default
+ – makes up the main body of the gland (approximately 65%) and is located
+ posteriorly.
+ The ducts of the glands from the peripheral zone are vertically emptying
+ in the prostatic urethra; that may explain the tendency of these glands
+ to permit urine reflux.
+ That also explains the high incidence of acute and chronic inflammation
+ found in these compartments, a fact that may be linked to the high incidence
+ of prostate carcinoma at the peripheral zone.
+ The peripheral zone is mainly the area felt against the rectum on Digital
+ Rectal Examinations (DRE), which is of irreplaceable value.
 \end_layout
 
 \begin_layout Standard
@@ -177,7 +381,510 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename prostate.PNG
+	filename Anatomical-Position-and-Zones-of-the-Prostate.jpg
+	lyxscale 35
+	scale 25
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The three zones of prostate 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "epstein2008biopsy"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The arterial supply to the prostate comes from the prostatic arteries, which
+ are mainly derived from the internal iliac arteries.
+ Some branches may also arise from the internal pudendal and middle rectal
+ arteries 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "yang2017interpretation,epstein2008biopsy"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Venous drainage of the prostate is via the prostatic venous plexus, draining
+ into the internal iliac veins.
+ However, the prostatic venous plexus also connects posteriorly by networks
+ of veins, including the Batson venous plexus, to the internal vertebral
+ venous plexus
+\begin_inset CommandInset citation
+LatexCommand cite
+key "epstein2008biopsy"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+To give 3D demonstration of Prostate, th following figure will help.
+ It is important to understand these zones in order to understand the next
+ chapter and the effeciency of the algorithm to segment the zones of prostate.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename prostate anatomy.PNG
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The 3D image of prostate showing different zone locations 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "prostate_Verma"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The prostate receives sympathetic, parasympathetic and sensory innervation
+ from the inferior hypogastric plexus.
+ The smooth muscle of the prostate gland is innervated by sympathetic fibres,
+ which activate during ejaculation.
+\end_layout
+
+\begin_layout Section
+Prostatic carcinoma
+\end_layout
+
+\begin_layout Standard
+It is most commonly diagnosed cancer among men.
+ The malignant cells commonly originate from the peripheral zone, although
+ carcinomas may arise (more rarely) from the central and transition zones
+ too.
+\end_layout
+
+\begin_layout Standard
+However the proximity of the peripheral zone to the neurovascular bundle
+ that surrounds the prostate may facilitate spread along perineural and
+ lymphatic pathways, thus increasing the metastatic potential of these tumors.
+ Malignant cells may invade adjacent structures (bladder, seminal vesicles)
+ and/ or lymphatic and blood vessel routes to give distant 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "yang2017interpretation"
+literal "false"
+
+\end_inset
+
+.
+ metastases
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+metastases means the development of secondary malignant growths at a distance
+ from a primary site of cancer
+\end_layout
+
+\end_inset
+
+.
+ We were given task to deal with an adenocarcinoma type of cancer for prostate.
+ It is a type of cancer that arises in the cells of glands.
+ Most cells in the prostate gland are of the glandular type, which means
+ that adenocarcinoma is the most common type of cancer to occur in the prostate.
+ Cancer occurs when the genes of a cell become abnormal (mutation), causing
+ the cell to multiply and interfere with the normal function of a tissue.
+\end_layout
+
+\begin_layout Standard
+Once the cancer reaches a certain size, the abnormal cells can spread to
+ other parts of the body and cause cancerous tumours to grow.
+ This phenomenon is known as metastasis.
+ If a tumour is capable of spreading to other parts of the body in this
+ way, it is called malignant.
+ Adenocarcinoma of the prostate is malignant, however many types grow extremely
+ slowly, and so are unlikely to spread before a man dies of other causes
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "epstein2008biopsy"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In order to have an intuition about prostate cancer, the below figure will
+ help.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename prostatecancer.jpg
+	lyxscale 50
+	scale 40
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The tumur is shown in white color.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "yang2017interpretation"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Active Contour Model
+\end_layout
+
+\begin_layout Standard
+This chapter covers the most important concept of the project which is the
+ algorithm we used to segment the prostate images.
+ It is important to understand the algorithm in order to fully understand
+ the project.
+\end_layout
+
+\begin_layout Standard
+Active contour model is also known as snakes.
+ It is very popular among Computer Vision community.
+ This algorithm has enormous applications from Autonomous driving cars to
+ medical imaging.
+ It is one of very reliable and easy to implement algorithm available.
+ Snake is an energy minimizing algorithm, which means it works on some optimizat
+ion technique to find the minimum energy.
+ We need an energy function, that matches our intuition about how good the
+ segmentation is.
+\end_layout
+
+\begin_layout Standard
+The question here arsises about what actually energy is.
+ and how to think about energy in order to understand.
+ Let define energy as 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "withkin1988snakes"
+literal "false"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+E(c)=E_{internal}(c)+E_{external}(c)\label{eq:}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this equation, the internal energy function depends only on the shape
+ of the curve.
+ The external parameter depends on the image intensities.
+ Now lets talk about the internal parameter in detail.
+\end_layout
+
+\begin_layout Section
+Internal Energy
+\end_layout
+
+\begin_layout Standard
+The general idea is that relaxed shape have low energy and twisty shapes
+ with too many curves have lot os energy.
+ In physics terminology, we can say that smooth curves have low tension
+ and highly twisted curves have more energy.
+ The following figure will give the idea.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename energycurves.PNG
+	scale 70
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Different curves having different energies.
+ Curve 1 has least energy and curve 4 has most energy.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To describe this idea mathematically we use the following equation 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "withkin1988snakes"
+literal "false"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+E_{internal}=\intop_{a}^{b}(\alpha||c'(s)||^{2}+\beta||c''(s)||^{2})ds\label{eq:2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ parameter here is defines the tension or strechness of the curve.
+ Note that it scales the single derivative of the curve 
+\begin_inset Formula $s$
+\end_inset
+
+.
+ The low 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ means, the curve will be less curvy and low energy ultimately.
+ The double derivative can be thought of as describing the twisting capability
+ of the curve.
+ The double derivative highlights oscillation behaviour in snake by taking
+ difference in the points placements of curves.
+\end_layout
+
+\begin_layout Section
+External Energy
+\end_layout
+
+\begin_layout Standard
+The external energy of the curve in the image depends on the image itself.
+ It is used to detect the edges.
+ The mathematical defination can be written as 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "withkin1988snakes"
+literal "false"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+E_{external}=\intop_{a}^{b}-||\nabla Ic(s)||^{2}ds\label{eq:-1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The gradient of any two nearby pixels is actually the difference of the
+ intensity values f the two pixels.
+ The above formula can be written as:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+E_{external}=\intop_{a}^{b}-[(\frac{\delta I}{\delta x}(x(s),y(s)))^{2}+(\frac{\delta I}{\delta y}(x(s),y(s)))^{2}]ds\label{eq:-2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If there is no edge in the image there will be no difference in intensity
+ values of the neighbouring pixels and the gradient will be equl to zero.
+ However, If there is any edge, the gradient will have some good positive
+ value and multiplication with minus sign outside the norm will make it
+ negative, hence energy will be lowest.
+\end_layout
+
+\begin_layout Standard
+In short, the lowest value of External energy indicates a edge and value
+ of Internal energy explains the least curviness and tension in the curve.
+ The problem is to find the least 
+\begin_inset Formula $E(c)$
+\end_inset
+
+.
+ This is how active contour model works.
+ This was the simplest idea of Active contour model, ofcourse there are
+ much more complicated modification in this idea to get the maximum performance
+ from the model while on implementation and that requires quite rigorous
+ mathematical practice.
+ However, still the basic equations and theory we describes remains always
+ relevent.
+\end_layout
+
+\begin_layout Chapter
+Implementation on MATLAB
+\end_layout
+
+\begin_layout Standard
+This Chapter discusses the methodolgy of implementing the algorithm to find
+ the desired results successfully.
+ The chapter discusses challenges faced and limitation of MATLAB in implementati
+on.
+\end_layout
+
+\begin_layout Standard
+To carry out this project, we decided to use MATLAB app designer.
+ This is a very powerful tool and it allows us to package the application
+ for matlab apps for future.
+ Its like creating a MATLAB toolbox.
+ The MATLAB app designer is relatively a new feature, so it has some limitations.
+ Also, some of the functions are not compatible with GUI function and Matlab
+ provides parrallel functions to make it work.
+ However it was a great experience and tool is very reliable and user friendly
+ and easy to learn.
+\end_layout
+
+\begin_layout Standard
+The project was divided into three main tasks.
+ These are shown in below figure.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename tasks.PNG
 	lyxscale 50
 	scale 50
 
@@ -187,7 +894,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Prostate location
+Project subdivided into 3 main tasks.
 \end_layout
 
 \end_inset
@@ -198,6 +905,980 @@ Prostate location
 \begin_layout Plain Layout
 
 \end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Image Conversions
+\end_layout
+
+\begin_layout Standard
+We were supposed to convert Dicom images to JPEG, JPEG to Dicom.
+ While converting, the information from dicom images regarding patients
+ was important to extract and deal with.
+ Because in JPEG format, there is no replacement and compatibility to save
+ the patient information.
+ The important data was extracted from the Dicom images by accessing the
+ cell array 'info_original', and saved in a seperate folder named 'metadata'.
+ The task of converting from JPEG back to Dicom was acheived by extracting
+ the information from metadata file and concatenating it with the respective
+ image.
+\end_layout
+
+\begin_layout Standard
+To ananymize the patient data from Dicom images, we extracted related informatio
+n from the 'info_original' cell array and measured length of each data and
+ replaced it with 'x'.
+\end_layout
+
+\begin_layout Standard
+All of these operation were designed with default folder creation in case
+ if there is no folder existing.
+ These operations were designed to perform on the whole folder of input
+ image.
+\end_layout
+
+\begin_layout Section
+Segmentation
+\end_layout
+
+\begin_layout Standard
+This is the trikiest part of the project.
+ We faced a problem while drawing the initial contour for segmentation.
+ The MATLAB app designer UIAxes, which deals with the images does not supports
+ the freehand function.
+ We solved this problem by creating a figure outside GUI and performing
+ Active contour segmentation on it, and then showing the results back to
+ the GUI.
+\end_layout
+
+\begin_layout Standard
+The Active contour function in matlab was used.
+ The function takes multiple parameter.
+ They are as follows:
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Image – 
+\series default
+The image on which there is object to be segmented
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Mask – 
+\series default
+The mask is region of interest.
+ The is input we give when we draw the initial contour.
+ The size of mask must match the size of the image A.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+No of Iterations – 
+\series default
+The no of iterations are decided on the basis of accuracy needed.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Method
+\series default
+ – Active contour method used for segmentation, specified as 'Chan-Vese'
+ or 'edge'.
+ We used edge model.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Degree of Smoothness
+\series default
+ – Degree of smoothness or regularity of the boundaries of the segmented
+ regions, specified as the comma-separated pair consisting of 'SmoothFactor'
+ and a positive number.
+ Higher values produce smoother region boundaries but can also smooth out
+ finer details.
+ Lower values produce more irregularities (less smoothing) in the region
+ boundaries but allow finer details to be captured.
+ The default smoothness value is 0 for the 'Chan-Vese' method and 1 for
+ the 'edge' method.
+ It refers to 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ parameter as discussed in previous chapter.
+\end_layout
+
+\begin_layout Standard
+The prompt box were created to ask the user regarding neccessary parameters
+ that were subject to change with the changing input images.
+\end_layout
+
+\begin_layout Section
+3D Reconstruction
+\end_layout
+
+\begin_layout Standard
+After the images were segmented and saved according to there category.
+ Each semented image was saved according to its instance / slice no.
+ The 3D draw function takes each slice of segmented image in the order of
+ there slice no and puts them over each other, thus creating a 3D object.
+ The 3D draw function was originally fetched from github and modified according
+ to our needs.
+\end_layout
+
+\begin_layout Standard
+In summary, the following flow chart demonstrates the working of Matlab
+ code Application.
+ The segmentation for each slice was repeated to construct a good 3D image
+ of the object.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename flowchartMatlab.png
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The flow chart demonstrating the implementation of Active contour model
+ and 3D reconstruction on MATLAB.
+ The arrows signifies iterations neccessary to carry out enough segmentation
+ to achieve 3D reconstruction.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+User Guide for Prostate Segmentator
+\end_layout
+
+\begin_layout Standard
+This chapter guides the user how to use the application and executable file.
+\end_layout
+
+\begin_layout Standard
+The application was built on MATLAB app designer.
+ It is relatively new platform and is different from GUIDE.
+ App Designer is an interactive development environment for designing an
+ app layout and programming its behavior.
+\end_layout
+
+\begin_layout Standard
+Now lets start with the aplication.
+ When you run the program the following figure will appear in the screen.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename image1ui.PNG
+	lyxscale 50
+	scale 55
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The main window of appication
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To upload the images, we use the button Load image folder in yellow colour.
+ It will load the whole folder of dicom images in our database.
+ Select the database you want to open.
+ Donot select folder with other formats exept Dicom.
+ This button is not programmed to work for other image types.
+ The purple color buttons with next and previous images written on them
+ will navigate you through different slices / instances of MRI.
+ The data will change accordingly.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename image2.PNG
+	lyxscale 50
+	scale 55
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The axes showing first image by defualt and patient data has been loaded.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To ananymize the images, we just click on Anonymize images and save button.
+ It will automatically create folder if there aint exist any and save images
+ in it.
+ You can check them by loading anonymized folder.
+ The following figure will appear:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename image3.PNG
+	lyxscale 50
+	scale 55
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Anonymized images are saved in a seperate folder in the working directory,
+ where they can be accessed using Load folder option.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In the same way, we can convert Dicom to JPEG and vise versa.
+ The folder to save these images will be automatically created.
+ The next step is to go for segmentation.
+ In the segmentation toolbox, Select Active Contour Segmentation, the following
+ window will prompt to advise you to draw initial contour / mask.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The pop ups guide you at every stage like this.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename image4.PNG
+	lyxscale 70
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now you will see the prompt window asking for the number of iterations.
+ The default value for no of iterations has been set up to 200.
+ Input the no of iterations you want, and click OK.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename image5.PNG
+	lyxscale 40
+	scale 70
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Input parameters are must be positive number.
+ and it should not be zero.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+After no of iterations, a second prompt box will appear asking you for the
+ smoothness factor.
+ The default value for smoothness factor is 1.5.
+ Please enter your desired smoothness factor and click OK.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename image6.PNG
+	lyxscale 50
+	scale 70
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The smoothness factor should be positive number and not be zero.
+ The default smoothness value is 0 for the 'Chan-Vese' method and 1 for
+ the 'edge' method.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now, a prompt box will pop us to ask how you want to draw initial contour
+ for active contour problem.
+ There are three ways, either you select freehand or circle or rectangle.
+ Select your desired method and draw contour.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename image7.PNG
+	lyxscale 50
+	scale 70
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The desired method of drawing intial contour must be selected.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The contour can be drawn by pressing the left click of mouse and moving.
+ When you release click that means you are done and contour will close itself.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename image8.PNG
+	lyxscale 50
+	scale 55
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The blue line is initial contour drawn.
+ It is done to segment peripheral zone.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now you need to wait sometime, probably 30 seconds to one minute for algorithm
+ to work.
+ Once it is done the following figure will appear with the segmented image.
+ If you like the segmented image you can move to click save the image other
+ wise repeat the process by changing parameters to get the suitable segmentation.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename image9.PNG
+	lyxscale 55
+	scale 55
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The segmented image is shown on the User Interface.
+ The white area indicates the segmentation,
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now click the save button to save the segmented image.
+ Once you click it, the following figure will prompt asking you to categorize
+ what does the segmented image refers to.
+ Please select the correct category.
+ It will save image in that respected folder in segmented images.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename image10.PNG
+	lyxscale 50
+	scale 55
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The saving category helps in to categerozi images for 3D reconstruction.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The knowlegde of slice / instance is important while saving the segmented
+ image.
+ It will be used for 3D reconstruction.
+ Confirm the instance no in the prompt box and click OK.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename image11.PNG
+	lyxscale 55
+	scale 55
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The default value is taken from current index.
+ You just need to confirm in most cases, if you dont want to manipulate
+ results.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The area and volume of segmented image is also shown at the bottom of the
+ window.
+ It is caculated by the product of white pixels in segmented image by Pixel
+ spacing of dicaom image.
+ The volume of segmented image was calculated by the product of area calculated
+ by pixel thickness of Dicom image.
+\end_layout
+
+\begin_layout Section*
+3D Reconstruction
+\end_layout
+
+\begin_layout Standard
+Now you have to repeat this process for reasonable amount of times for each
+ instance / slice.
+ Once you have enough segemnted images for the particular category, you
+ can move to produce 3D image.
+\end_layout
+
+\begin_layout Standard
+Click on show 3D button and select the segmented folder.
+ Within segmented folder, you will see 4 subfolders of Tumur , Central ,
+ Peripheral and Temporal zones.
+ Select the desired folder and figure with 3D of particular object (like
+ tumor) will appear.
+\end_layout
+
+\begin_layout Standard
+The figure below gives 3D reconstruction of Peripheral zone of the Prostate.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align left
+\begin_inset Graphics
+	filename peripheralz2.eps
+	lyxscale 40
+	scale 50
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename peripheralz1.eps
+	lyxscale 50
+	scale 55
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+3D reconstruction of Peripheral zone.
+ The peripheral zone is u shaped as it can be seen.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The 3D reconstruction of Central zone is shown in below figure.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename central1.eps
+	lyxscale 55
+	scale 50
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename central2.eps
+	lyxscale 55
+	scale 50
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+3D reconstruction of central zone.
+ The central zone is oval in shape mostly.
+ However, more accurate results can be obtained by more careful segmentation.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+The 3D reconstruction of Transitional / Temporal zone is shown in below
+ figure.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename temporal1.eps
+	lyxscale 55
+	scale 50
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename temporal2.eps
+	lyxscale 55
+	scale 50
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+3D reconstruction of Transitional zone.
+ The transitional zone is divided into two parts.
+ The shape is quite random but we believe more accurate 3D reconstruction
+ can be done by good quality dataset.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+The 3D reconstruction of Tumor is shown in below figure.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename tumur1.eps
+	lyxscale 55
+	scale 50
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename tumur2.eps
+	lyxscale 55
+	scale 50
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+3D reconstruction of tumur (cancer).
+ The tumur has totally rando shape and is usually relatively small.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter*
+Executive Summary
+\end_layout
+
+\begin_layout Standard
+Prostate cancer can be detected successfully with Active contour model or
+ snake algorithm.
+ The 3D reconstruction might not be the most precise and accurate but gives
+ us a good estimate and idea of behaviour of tumur and well as anatomy of
+ prostate.
+ We create a MATLAB app and execution file to implement it.
+ The MATLAB app can be installed on MATLAB and used to demonstrate to future
+ students.
+ This was a wonderful oppertunity to learn and implement Active contour
+ model.
+ We found it to be extremely powerful and great tool for segmentation.
+ We realized that its applications can be endless.
+ We are really thankful to Mr.
+ Christian MATA for his guidance.
+ We also acknowledge Github, MATLAB online platform and Stack overflow for
+ their support and helping us with coding queries.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintCited"
+bibfiles "ComputerVision"
+options "plain"
 
 \end_inset
 
