@@ -12,7 +12,12 @@ The algorithm is implemented on MATLAB and an application is created.
 ## Author 
 Arsalan Khawaja is an intern researcher at Endoscopy and Computer Vision Research Group at Clermont-Ferrand, France. His
 area of interest is Interactive segmentation of Medical Images, Image registration and Control theory. 
-## Tools 
-MATLAB app designer was used to carry out this project
+## User Guide
+The application was built on MATLAB app designer. It is relatively new
+platform and is dierent from GUIDE. App Designer is an interactive develop-
+ment environment for designing an app layout and programming its behavior.
+Now lets start with the aplication. When you run the program the following
+figure will appear in the screen.
+![img](Report/image1ui.png)
 ## Details
 The details, user manual of the software are explained in the project report, which is available.
