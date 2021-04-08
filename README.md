@@ -14,10 +14,10 @@ Arsalan Khawaja is an intern researcher at Endoscopy and Computer Vision Researc
 area of interest is Interactive segmentation of Medical Images, Image registration and Control theory. 
 ## User Guide
 The application was built on MATLAB app designer. It is relatively new
-platform and is dierent from GUIDE. App Designer is an interactive develop-
+platform and is different from GUIDE. App Designer is an interactive develop-
 ment environment for designing an app layout and programming its behavior.
 Now lets start with the aplication. When you run the program the following
 figure will appear in the screen.
-![img](Report/image1ui.png)
+![GitHub Logo](/Report/image1ui.PNG)
 ## Details
 The details, user manual of the software are explained in the project report, which is available.
