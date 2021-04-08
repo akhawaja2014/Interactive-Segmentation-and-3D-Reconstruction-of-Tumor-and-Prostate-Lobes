@@ -9,7 +9,7 @@ project starts with GUI explanation, code structure, brief introduction of Prost
 pre-requisites to understand the aim of the project. We then describes
 active contour model and theory behind to let reader's know how it works.
 The algorithm is implemented on MATLAB and an application is created.
-## By Arsalan Khawaja 
+## Author 
 Arsalan Khawaja is an intern researcher at Endoscopy and Computer Vision Research Group at Clermont-Ferrand, France. His
 area of interest is Interactive segmentation of Medical Images, Image registration and Control theory. 
 ## Tools 
