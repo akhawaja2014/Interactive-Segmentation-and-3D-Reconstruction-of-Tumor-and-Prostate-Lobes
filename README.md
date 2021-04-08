@@ -18,6 +18,18 @@ platform and is different from GUIDE. App Designer is an interactive develop-
 ment environment for designing an app layout and programming its behavior.
 Now lets start with the aplication. When you run the program the following
 figure will appear in the screen.
+
 ![GitHub Logo](/Report/image1ui.PNG)
+
+To upload the images, we use the button Load image folder in yellow colour.
+It will load the whole folder of dicom images in our database. Select the database
+you want to open. Donot select folder with other formats exept Dicom. This
+button is not programmed to work for other image types. The purple color but-
+tons with next and previous images written on them will navigate you through
+different slices / instances of MRI. The data will change accordingly.
+
+![GitHub Logo](/Report/image2.PNG)
+
+
 ## Details
 The details, user manual of the software are explained in the project report, which is available.
