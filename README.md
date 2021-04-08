@@ -30,6 +30,12 @@ different slices / instances of MRI. The data will change accordingly.
 
 ![GitHub Logo](/Report/image2.PNG)
 
+To ananymize the images, we just click on Anonymize images and save but-
+ton. It will automatically create folder if there aint exist any and save images
+in it. You can check them by loading anonymized folder. The following figure
+will appear:
+
+![GitHub Logo](/Report/image3.PNG)
 
 ## Details
 The details, user manual of the software are explained in the project report, which is available.
