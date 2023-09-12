@@ -1,4 +1,4 @@
-# Semi Automatic Segmentation of Prostate using computer vision
+# Semi Automatic Segmentation of Prostate using Active Contour method
  Prostate cancer is most common cancer among men. There has been a lot of
 research to detect the cancer at the earliest possible stage. A number of meth-
 ods are available and used to detect tumor, but scientific community is always
