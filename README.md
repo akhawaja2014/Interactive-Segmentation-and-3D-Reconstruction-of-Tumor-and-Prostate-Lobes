@@ -115,7 +115,7 @@ confirm in most cases, if you don't want to manipulate results.
 
 The area and volume of the segmented image are also shown at the bottom of the
 window. It is calculated by the product of white pixels in a segmented image by
-Pixel spacing of dicaom image. The volume of the segmented image was calculated
+Pixel spacing of Dicom image. The volume of the segmented image was calculated
 by the product of area calculated by the pixel thickness of the Dicom image.
 
 
