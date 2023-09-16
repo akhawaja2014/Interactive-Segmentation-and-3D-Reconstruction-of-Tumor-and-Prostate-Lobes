@@ -1,17 +1,18 @@
 # Semi Automatic Segmentation of Prostate using Active Contour method
- Prostate cancer is most common cancer among men. There has been a lot of
-research to detect the cancer at the earliest possible stage. A number of meth-
-ods are available and used to detect tumor, but scientific community is always
-curious to and a compuationally cheap, reliable, robust and more accurate seg-
-mentation of prostate. This project proposes semi automatic segmentation of
-different zones of prostate as well as tumor using Active Contour Model. The
-project starts with GUI explanation, code structure, brief introduction of Prostate and discusses related biological
-pre-requisites to understand the aim of the project. We then describes
-active contour model and theory behind to let reader's know how it works.
+ Prostate cancer is the most common cancer among men. There has been a lot of
+research to detect cancer at the earliest possible stage. A number of meth-
+ods are available and used to detect tumors, but the scientific community is always
+curious to and a computationally cheap, reliable, robust, and more accurate seg-
+mentation of prostate. This project proposes semi-automatic segmentation of
+different zones of the prostate as well as tumor using the Active Contour Model. The
+project starts with a GUI explanation, code structure, and brief introduction of Prostate and discusses related biological
+prerequisites to understand the aim of the project. We then describe
+the active contour model and the theory behind it to let readers know how it works.
 The algorithm is implemented on MATLAB and an application is created.
 ## Author 
-Arsalan Khawaja is an intern researcher at Endoscopy and Computer Vision Research Group at Clermont-Ferrand, France. His
-area of interest is Interactive segmentation of Medical Images, Image registration and Control theory. 
+Arsalan Khawaja is currently a joint PhD Student at NTNU, Norway, and the University of Burgundy, France. His past experience includes intern researcher at the Endoscopy and Computer Vision (EnCoV) Research Group at Clermont-Ferrand, France, and as a Research Assistant at the Institute of Space Technology, Islamabad. His
+area of interest is Interactive Machine Learning, Image registration, Reflectance Transformation Imaging, and Control theory.
+Currently, he is working on developing Optimization Algorithms for Reflectance Transformation Imaging. 
 ## User Guide
 The application was built on MATLAB app designer. It is relatively new
 platform and is different from GUIDE. App Designer is an interactive develop-
